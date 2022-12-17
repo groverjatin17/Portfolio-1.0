@@ -1,0 +1,65 @@
+@mixin app-title {
+    color: red;
+}
+
+.potter-route {
+    margin: 0 50px 0 50px;
+    text-transform: capitalize;
+
+    & .potter-title {
+        @include app-title;
+    }
+    & .potter-table {
+        box-shadow: 0 0 5px #d4d4d5;
+        & .ui.image.label {
+            text-transform: capitalize;
+        }
+        & p {
+            color: #787878;
+            font-family: 'ITC Officina Serif';
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 25px;
+            margin: 0;
+        }
+        & .house-image {
+            width: 65px;
+            height: 30px;
+        }
+    }
+    & .potter-character-details {
+        margin: 0 0 50px 0;
+        & img {
+            width: 40px;
+            height: 40px;
+            float: left;
+        }
+        & .potter-heading {
+            margin: 0;
+            font-size: 25px;
+            font-weight: 700;
+            color: #e0aa40;
+        }
+        & .potter-value {
+            margin-left: 40px;
+            font-size: 17px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .potter-route {
+        .ui.pagination.menu .item {
+            min-width: 0;
+        }
+        .css-jrs7nr-control {
+            width: 55%;
+        }
+        .css-mvqqzp-menu {
+            width: 55%;
+        }
+        .css-b7jmx5-control {
+            width: 55%;
+        }
+    }
+}
